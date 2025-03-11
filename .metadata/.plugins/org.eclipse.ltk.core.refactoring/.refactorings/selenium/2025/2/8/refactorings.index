@@ -1,0 +1,13 @@
+1739925631415	Copy compilation unit
+1739925639986	Delete element
+1739954969633	Copy file
+1739955010930	Copy file
+1740042874258	Copy file
+1740063888323	Move 'listener.xml' to 'testSuite'
+1740063942656	Move 3 resources to 'testSuite'
+1740063983161	Move 'listener.xml' to 'selenium'
+1740064006909	Move 'pom.xml' to 'selenium'
+1740064024727	Move 'smoke.xml' to 'selenium'
+1740064035211	Move 'testng.xml' to 'selenium'
+1740069112290	Rename package 'Resources'
+1740184779653	Rename package 'selenium.resources'

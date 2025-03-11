@@ -1,0 +1,33 @@
+package test;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Assignment8 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();	
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		driver.findElement(By.id("autocomplete")).sendKeys("ind");
+		Thread.sleep(3000);
+		List<WebElement> options = driver.findElements(By.cssSelector(".ui-menu-item"));
+		for(WebElement option: options) {
+			
+		Actions a= new Actions(driver);
+		a.moveToElement(driver.findElement(By.cssSelector(".ui-menu-item"))).build().perform();
+		System.out.println(driver.findElement(By.cssSelector(".ui-menu-item")).getText());
+		
+		}
+
+	}
+
+}

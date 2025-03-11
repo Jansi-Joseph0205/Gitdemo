@@ -1,0 +1,40 @@
+package test;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class assignment6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();	
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		WebElement option = driver.findElement(By.id("checkBoxOption1"));
+		String opt = null;
+		//selecting the option1 check box
+		option.click();
+		
+		//Check whether option1 checkbox is checked
+		System.out.println(option.isSelected());
+		
+		//Getting attribute value of checked checkbox
+		System.out.println(driver.findElement(By.id("checkBoxOption1")).getDomAttribute("value"));
+		
+		List<WebElement> checkboxes=driver.findElements(By.xpath("//input[@type='checkbox']"));
+		for (WebElement checkbox: checkboxes) {
+			if(option.isSelected()) {
+				 opt = checkbox.getText();
+		   //System.out.println(checkbox.getText());
+		   break;
+			}
+		
+	}
+		 System.out.println(opt);
+}
+}

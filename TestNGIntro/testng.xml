@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.ex1">
+		  <methods>
+			  <include name="demo"></include>
+		  </methods>
+	  </class>
+      <class name="test.ex4"/>
+    </classes>
+  </test> 
+  
+  <test name="car-loan">
+	  <classes>
+		  <class name="test.ex3">
+			  <methods>
+				  <exclude name="apiLogincar"></exclude>
+			  </methods>
+		  </class>
+	  </classes>
+	  
+  </test>
+</suite> 
